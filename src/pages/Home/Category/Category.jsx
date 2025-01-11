@@ -3,7 +3,7 @@ import CategoryCard from "./CategoryCard";
 
 const Category = () => {
   return (
-    <div className="max-w-6xl mx-auto mb-20">
+    <div className="container mx-auto mb-20">
       <SectionTitle
         subHeading="From 11:00am to 10:00pm"
         heading="oder online"

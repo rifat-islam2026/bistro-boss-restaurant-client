@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
+import Services from "../Services/Services";
+import PopularMenu from "../PopularMenu/PopularMenu";
 
 const Home = () => {
   return (
@@ -10,7 +12,9 @@ const Home = () => {
         <meta name="description" content="Helmet application" />
       </Helmet>
           <Banner />
-          <Category/>
+          <Category />
+          <Services />
+          <PopularMenu />
     </div>
   );
 }
