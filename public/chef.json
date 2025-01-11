@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Grilled Salmon with Lemon Butter Sauce",
+    "description": "A perfectly grilled salmon fillet served with a creamy lemon butter sauce.",
+    "price": 25.99,
+    "image": "https://i.ibb.co.com/d5Ztc3h/2.jpg",
+    "category": "Main Course",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "name": "Truffle Mushroom Risotto",
+    "description": "A rich and creamy risotto made with truffle oil and wild mushrooms.",
+    "price": 19.99,
+    "image": "https://i.ibb.co.com/fD4782P/6.jpg",
+    "category": "Vegetarian",
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "name": "Classic Margherita Pizza",
+    "description": "Wood-fired pizza topped with fresh mozzarella, tomatoes, and basil.",
+    "price": 14.99,
+    "image": "https://i.ibb.co.com/0B0D0ng/7.jpg",
+    "category": "Pizza",
+    "rating": 4.6
+  },
+  {
+    "id": 4,
+    "name": "Spaghetti Carbonara",
+    "description": "Classic Italian pasta with creamy egg sauce, pancetta, and parmesan.",
+    "price": 18.99,
+    "image": "https://i.ibb.co.com/ydWwYK0/5.jpg",
+    "category": "Pasta",
+    "rating": 4.9
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Lava Cake",
+    "description": "Warm chocolate cake with a gooey molten center, served with vanilla ice cream.",
+    "price": 9.99,
+    "image": "https://i.ibb.co.com/d5Ztc3h/2.jpg",
+    "category": "Dessert",
+    "rating": 4.9
+  }
+]

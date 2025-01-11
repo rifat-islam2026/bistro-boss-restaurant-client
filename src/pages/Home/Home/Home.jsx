@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
-import Services from "../Services/Services";
+import Contact from "../Contact/Contact";
 import PopularMenu from "../PopularMenu/PopularMenu";
+import Services from "../Services/Services";
+import Chef from "../Chef/Chef";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
           <Category />
           <Services />
           <PopularMenu />
+          <Contact />
+          <Chef />
     </div>
   );
 }

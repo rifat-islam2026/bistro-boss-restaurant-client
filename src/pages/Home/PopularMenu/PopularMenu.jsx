@@ -30,7 +30,7 @@ const PopularMenu = () => {
           <MenuCard key={item.id} item={item} />
         ))}
       </div>
-      <span className=" flex justify-center mt-5">
+      <span className="flex justify-center mt-5">
         <button className="uppercase btn btn-outline border-0 border-b-4">
           view all
         </button>
