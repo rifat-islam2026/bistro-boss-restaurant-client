@@ -1,32 +1,29 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
-    let user = ''
+  let user = "";
   const links = (
     <>
-      <li>
+      <li className="text-yellow-500">
         <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/about">About</NavLink>
-      </li>
-      <li>
-        <NavLink to="/services">Services</NavLink>
       </li>
       <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>
-      {user && (
-        <li>
-          <NavLink to="/updateProfile">Update Profile</NavLink>
-        </li>
-      )}
+      <li>
+        <NavLink to="/dashboard">Dashboard</NavLink>
+      </li>
+      <li>
+        <NavLink to="/menu">Our Menu</NavLink>
+      </li>
+      <li>
+        <NavLink to="/shop">Our Shop</NavLink>
+      </li>
     </>
   );
   return (
     <>
-      <div className="navbar bg-transparent">
+      <div className="navbar bg-black/20 fixed z-50">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,22 +44,30 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-50"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-50 uppercase font-semibold"
             >
               {links}
             </ul>
           </div>
-          <Link to="/" className="font-bold text-2xl">
-            Painting And Drawing
+          <Link to="/" className="font-bold text-white">
+            <span className="text-2xl font-bold uppercase">bistro boss</span>
+            <br />
+            <p className="font-bold uppercase">Restaurant</p>
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
-        </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex items-center">
+          
+        <div className="hidden lg:flex">
+          <ul className="flex gap-7 px-1 uppercase font-semibold text-white">
+            {links}
+          </ul>
+          </div>
+          
           {!user && (
             <Link to="/login">
-              <button className="btn btn-info">Login</button>
+              <button className="text-white px-3 py-1 uppercase font-semibold">
+                Login
+              </button>
             </Link>
           )}
           {user && (
@@ -88,7 +93,7 @@ const Navbar = () => {
                     Profile
                   </Link>
                 </li>
-                <li className="mt-2" >
+                <li className="mt-2">
                   <button className="bg-gray-200 block text-center hover:bg-warning">
                     Logout
                   </button>
