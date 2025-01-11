@@ -10,7 +10,7 @@ import img6 from "../../../assets/home/06.png";
 const img = () => {
   return (
     <div className="top-0">
-      <Carousel autoPlay>
+      <Carousel autoPlay infiniteLoop >
         <div>
           <img src={img1} />
         </div>
