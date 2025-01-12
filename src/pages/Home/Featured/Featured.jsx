@@ -1,6 +1,5 @@
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
-
 const Featured = () => {
   return (
     <div
@@ -24,8 +23,8 @@ const Featured = () => {
           </div>
 
           {/* Right Side: Content */}
-                  <div className="w-1/2 pl-10">
-                      <span className="text-lg">March 20, 2023</span>
+          <div className="w-1/2 pl-10">
+            <span className="text-lg">March 20, 2023</span>
             <h1 className="text-4xl font-bold mb-2">WHERE CAN I GET SOME?</h1>
             <p className="text-lg mb-6">
               This is the featured content description. Add some compelling
@@ -39,6 +38,6 @@ const Featured = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Featured
+export default Featured;
