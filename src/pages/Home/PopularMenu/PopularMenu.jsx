@@ -1,33 +1,19 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
-import MenuCard from "./MenuCard";
+
+import useMenu from "../../../Hooks/useMenu";
+import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 const PopularMenu = () => {
-  const [services, setServices] = useState([]);
-
-  console.log(services);
-
-  useEffect(() => {
-    try {
-      const fetchServices = async () => {
-        const {data} = await axios.get("menu.json");
-        const res = data.filter(item => item.category === 'popular');
-        setServices(res);
-      };
-      fetchServices();
-    } catch (error) {
-      console.log(error.message);
-    }
-  }, []);
+  const [menu] = useMenu();
+  const popular = menu.filter((item) => item.category === "popular");
   
   return (
     <div className="container mx-auto mb-10">
       <SectionTitle heading="From our menu" subHeading="Popular Items" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {services.map((item) => (
-          <MenuCard key={item.id} item={item} />
+        {popular.map((item) => (
+          <MenuItem key={item._id} item={item} />
         ))}
       </div>
       <span className="flex justify-center mt-5">

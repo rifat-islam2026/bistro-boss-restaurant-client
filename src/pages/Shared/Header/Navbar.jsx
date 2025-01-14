@@ -1,26 +1,63 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  let user = "";
+  let user = ""; // Example user state
+
   const links = (
     <>
-      <li className="text-yellow-500">
-        <NavLink to="/">Home</NavLink>
+      <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
+          }
+        >
+          Contact
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
+          }
+        >
+          Dashboard
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/menu">Our Menu</NavLink>
+        <NavLink
+          to="/menu"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
+          }
+        >
+          Our Menu
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/shop">Our Shop</NavLink>
+        <NavLink
+          to="/shop"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
+          }
+        >
+          Our Shop
+        </NavLink>
       </li>
     </>
   );
+
   return (
     <>
       <div className="navbar bg-black/20 fixed z-50">
@@ -56,13 +93,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-end flex items-center">
-          
-        <div className="hidden lg:flex">
-          <ul className="flex gap-7 px-1 uppercase font-semibold text-white">
-            {links}
-          </ul>
+          <div className="hidden lg:flex">
+            <ul className="flex gap-7 px-1 uppercase font-semibold text-white">
+              {links}
+            </ul>
           </div>
-          
+
           {!user && (
             <Link to="/login">
               <button className="text-white px-3 py-1 uppercase font-semibold">
@@ -78,7 +114,7 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-10 rounded-full">
-                  <img alt="User Profile " src={`${user.photoURL}`} />
+                  <img alt="User Profile" src={`${user.photoURL}`} />
                 </div>
               </div>
               <ul

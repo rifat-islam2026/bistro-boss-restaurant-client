@@ -2,7 +2,6 @@ import servicesImg from "../../../assets/home/chef-service.jpg";
 
 const Services = () => {
     
- 
   return (
     <div className="relative w-full h-full container mx-auto my-10">
       {/* Background Image */}
