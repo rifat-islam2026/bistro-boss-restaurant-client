@@ -2,24 +2,26 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const useMenu = () => {
- const [data, setData] = useState([]);
- const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
- console.log(data);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get("menu.json");
+        console.log(data);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching menu data:", error.message);
+      } finally {
+        setLoading(false); // Ensure loading state is updated regardless of success or failure
+      }
+    };
 
- useEffect(() => {
-   try {
-     const fetchData = async () => {
-       const { data } = await axios.get("menu.json");
-       setData(data);
-       setLoading(false)
-     };
-     fetchData();
-   } catch (error) {
-     console.log(error.message);
-   }
- }, []);
-  return[data,loading]
-}
+    fetchData();
+  }, []);
 
-export default useMenu
+  return [data, loading];
+};
+
+export default useMenu;

@@ -34,7 +34,7 @@ const Chef = () => {
               <h2 className="card-title">{chef.name}</h2>
               <p>{chef.description}</p>
               <div className="flex justify-center">
-                <button className="btn btn-outline text-yellow-600 bg-slate-300 border-0 border-b-4 px-10 uppercase">
+                <button className="btn btn-outline hover:text-yellow-500 text-yellow-600 bg-slate-300 border-0 border-b-4 px-10 uppercase">
                   add to cart
                 </button>
               </div>

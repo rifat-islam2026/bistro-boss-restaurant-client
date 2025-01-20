@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Root from "../Layout/Root"
 import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import Home from "../pages/Home/Home/Home"
+import Order from "../pages/Oder/Order/Order"
 import Menu from "../pages/OurMenu/Menu/Menu"
 
 const Router = () => {
@@ -11,6 +12,7 @@ const Router = () => {
               <Route path="/" element={<Root/>} >
                   <Route index element={<Home />} />
                   <Route path="/menu" element={<Menu />} />
+                  <Route path="/order/:category" element={<Order />} />
                   {/* Error pages */}
                   <Route path="*" element={<ErrorPage/>} />
               </Route>

@@ -47,12 +47,12 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/shop"
+          to="/order"
           className={({ isActive }) =>
             isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
           }
         >
-          Our Shop
+          Order Food
         </NavLink>
       </li>
     </>
@@ -87,7 +87,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="font-bold text-white">
-            <span className="text-2xl font-bold uppercase">bistro boss</span>
+            <span className="text-2xl font-bold uppercase text-orange-500">bistro boss</span>
             <br />
             <p className="font-bold uppercase">Restaurant</p>
           </Link>
@@ -121,9 +121,6 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <li>
-                  <NavLink to="/myCraftItems">My Art & Craft List</NavLink>
-                </li>
                 <li>
                   <Link to="/profile" className="justify-between">
                     Profile
