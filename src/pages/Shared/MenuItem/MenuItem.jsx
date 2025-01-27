@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 const MenuItem = ({item}) => {
   const { name, price, image, recipe } = item;

@@ -22,7 +22,7 @@ const Navbar = () => {
             isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
           }
         >
-          Contact
+          Contact us
         </NavLink>
       </li>
       <li>
@@ -47,7 +47,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/order"
+          to="/order/salad"
           className={({ isActive }) =>
             isActive ? "text-orange-500" : "text-gray-300 hover:text-white"
           }

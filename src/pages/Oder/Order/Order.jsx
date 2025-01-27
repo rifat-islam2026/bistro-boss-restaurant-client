@@ -6,11 +6,13 @@ import oderCover from "../../../assets/shop/banner2.jpg";
 import useMenu from "../../../Hooks/useMenu";
 import Cover from "../../Shared/Cover/Cover";
 import OrderTab from "../OderTab/OrderTab";
+import { useParams } from "react-router-dom";
 
 const Order = () => {
-  // const categories = ["salad", "pizza", "soups", "desserts", "drinks"];
-  // const initialIndex = categories.indexOf(category);
-  const [tabIndex, setTabIndex] = useState(0);
+  const { category } = useParams();
+  const categories = ["salad", "pizza", "soup", "dessert", "drinks"];
+  const initialIndex = categories.indexOf(category);
+  const [tabIndex, setTabIndex] = useState(initialIndex);
 
   const [menu] = useMenu();
 

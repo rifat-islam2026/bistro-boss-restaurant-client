@@ -8,7 +8,7 @@ const useMenu = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("menu.json");
+        const { data } = await axios.get("http://localhost:5000/menu");
         console.log(data);
         setData(data);
       } catch (error) {
@@ -17,7 +17,6 @@ const useMenu = () => {
         setLoading(false); // Ensure loading state is updated regardless of success or failure
       }
     };
-
     fetchData();
   }, []);
 

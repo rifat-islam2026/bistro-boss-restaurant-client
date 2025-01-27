@@ -18,7 +18,7 @@ const Testimonials = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const { data } = await axios.get("reviews.json");
+        const { data } = await axios.get("http://localhost:5000/reviews");
         setReviews(data);
       } catch (error) {
         console.log(error.message);

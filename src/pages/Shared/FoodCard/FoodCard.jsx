@@ -8,7 +8,7 @@ const FoodCard = ({ item }) => {
         </figure>
         <div className="card-body bg-slate-200">
           <h2 className="card-title">{name}</h2>
-          <p>{recipe}</p>
+          <p title={recipe}>{recipe.substring(0,80)}...</p>
           <div className="flex justify-center">
             <button className="btn btn-outline hover:text-yellow-500 text-yellow-600 bg-slate-300 border-0 border-b-4 px-10 uppercase">
               add to cart
